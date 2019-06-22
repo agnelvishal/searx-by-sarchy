@@ -85,6 +85,7 @@
     </div>
 
 
+    
 <style>
     @media (max-width: 730px) {
         div#card_text {
@@ -121,17 +122,17 @@
         p.appendChild(cText);
         document.querySelector("#card_text").appendChild(p);
         async function aff() {
-            ipApi = await fetch('https://ip-api.com/json');
+            ipApi = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=aea40f8a7e8a4cad821a69e83aa94f40');
             ipJson = await ipApi.json();
-            if (ipJson.country == "India") {
+            if (ipJson.country_name == "India") {
                 document.querySelector("#card a").href =
                     "https://www.amazon.in/s?k=steve+jobs&tag=%27cleantip-21%27";
             }
-            if (ipJson.country == "United States") {
+            if (ipJson.country_name== "United States") {
                 document.querySelector("#card a").href =
                     "https://www.amazon.com/gp/product/1451648537/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=pragmata03-20&creative=9325&linkCode=as2&creativeASIN=1451648537&linkId=0ee2422d465f8a99dd71815213dbb00e";
             }
-            if (ipJson.country == "France") {
+            if (ipJson.country_name== "France") {
                 document.querySelector("#card a").href =
                     "https://www.amazon.fr/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=pragmata0e-21&keywords=steve jobs&index=aps&camp=1642&creative=6746&linkCode=ur2&linkId=6005978ad39960a3aca247835513d2e3";
             }
@@ -156,17 +157,17 @@
         document.querySelector("#card_text").appendChild(p);
 
         async function aff() {
-            ipApi = await fetch('https://ip-api.com/json');
+            ipApi = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=aea40f8a7e8a4cad821a69e83aa94f40');
             ipJson = await ipApi.json();
-            if (ipJson.country == "India") {
+            if (ipJson.country_name == "India") {
                 document.querySelector("#card a").href =
                     "https://www.amazon.in/s?k=steve+jobs&tag=%27cleantip-21%27";
             }
-            if (ipJson.country == "United States") {
+            if (ipJson.country_name== "United States") {
                 document.querySelector("#card a").href =
                     "https://www.amazon.com/gp/product/1451648537/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=pragmata03-20&creative=9325&linkCode=as2&creativeASIN=1451648537&linkId=0ee2422d465f8a99dd71815213dbb00e";
             }
-            if (ipJson.country == "France") {
+            if (ipJson.country_name== "France") {
                 document.querySelector("#card a").href =
                     "https://www.amazon.fr/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=pragmata0e-21&keywords=steve jobs&index=aps&camp=1642&creative=6746&linkCode=ur2&linkId=6005978ad39960a3aca247835513d2e3";
             }
@@ -193,17 +194,17 @@
         document.querySelector("#card_text").appendChild(p);
     
         async function aff() {
-            ipApi = await fetch('https://ip-api.com/json');
+            ipApi = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=aea40f8a7e8a4cad821a69e83aa94f40');
             ipJson = await ipApi.json();
-            if (ipJson.country == "India") {
+            if (ipJson.country_name == "India") {
                 document.querySelector("#card a").href =
                     "https://www.amazon.in/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=cleantip-21&keywords=mother mary&index=aps&camp=3638&creative=24630&linkCode=ur2&linkId=ee09537e7927fe9fbe4bd7a2da9df644";
             }
-            if (ipJson.country == "United States") {
+            if (ipJson.country_name== "United States") {
                 document.querySelector("#card a").href =
                     "https://www.amazon.com/s?k=mother+mary&camp=1789&creative=9325&linkCode=xm2&linkId=56ed6bbcf4478d03e58948331c0736f3&tag=pragmata03-20&ref=as_li_qf_sp_sr_il_tl";
             }
-            if (ipJson.country == "France") {
+            if (ipJson.country_name== "France") {
                 document.querySelector("#card a").href =
                     "https://www.amazon.fr/s?k=vierge+Marie&camp=1642&creative=6746&linkCode=ur2&linkId=d513255441280c1f93e8eff8551b87b5&tag=pragmata0e-21&ref=as_li_qf_sp_sr_tl";
             }
@@ -221,17 +222,17 @@
         p.appendChild(cText);
         document.querySelector("#card_text").appendChild(p);
         async function aff() {
-            ipApi = await fetch('https://ip-api.com/json');
+            ipApi = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=aea40f8a7e8a4cad821a69e83aa94f40');
             ipJson = await ipApi.json();
-            if (ipJson.country == "India") {
+            if (ipJson.country_name== "India") {
                 document.querySelector("#card a").href =
                     "https://www.amazon.in/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=cleantip-21&keywords=mahatma gandhi&index=aps&camp=3638&creative=24630&linkCode=ur2&linkId=bd174b9500fa7af7dd6e43c95d2bb22f";
             }
-            if (ipJson.country == "United States") {
+            if (ipJson.country_name== "United States") {
                 document.querySelector("#card a").href =
                     "https://www.amazon.com/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=pragmata03-20&keywords=mahatma gandhi&index=aps&camp=1789&creative=9325&linkCode=ur2&linkId=abe192ba3313a6055ee60a11f57f97ff";
             }
-            if (ipJson.country == "France") {
+            if (ipJson.country_name== "France") {
                 document.querySelector("#card a").href =
                     "https://www.amazon.fr/gp/search/ref=as_li_qf_sp_sr_tl?ie=UTF8&tag=pragmata0e-21&keywords=mahatma Gandhi&index=aps&camp=1642&creative=6746&linkCode=ur2&linkId=eb61cfb941a1113b274f074ca8abc237";
             }
@@ -240,6 +241,7 @@
 
     }
 </script>
+
 
 
 
