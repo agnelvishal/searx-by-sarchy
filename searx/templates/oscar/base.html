@@ -101,7 +101,7 @@
 
 
 <div id="card"
-    style="margin:auto;width: 700px;position: relative;background:#333;box-shadow: 1px 1px 6px 2px #444;color:#a6a8aa;font-style:oblique;">
+    style="margin:30px auto auto auto;width: 700px;position: relative;background:#333;box-shadow: 1px 1px 6px 2px #444;color:#a6a8aa;font-style:oblique;">
     <a target="_blank" style="color:inherit;">
         <div id="card_text" style="width:550px;height: 150px;float:left;">
         </div>
@@ -112,7 +112,7 @@
 <script>
     n = Math.floor((Math.random() * 10)) % 4;
     if (n == 0) {
-        document.querySelector("#card_img").src = "steveT.png";
+        document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/steveT.png";
         p = document.createElement("p");
         p.setAttribute("style", "position:absolute;top:20%;");
         cText = document.createTextNode(
@@ -121,7 +121,7 @@
         p.appendChild(cText);
         document.querySelector("#card_text").appendChild(p);
         async function aff() {
-            ipApi = await fetch('http://ip-api.com/json');
+            ipApi = await fetch('https://ip-api.com/json');
             ipJson = await ipApi.json();
             if (ipJson.country == "India") {
                 document.querySelector("#card a").href =
@@ -140,7 +140,7 @@
     }
 
     if (n == 1) {
-        document.querySelector("#card_img").src = "krishnaT.png";
+        document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/krishnaT.png";
         p = document.createElement("p");
         cText = document.createTextNode(
             "'Johnny Johnny yes papa' rhymes teaches that if you get caught, have a laughing therapy session to reduce the guilt."
@@ -156,7 +156,7 @@
         document.querySelector("#card_text").appendChild(p);
 
         async function aff() {
-            ipApi = await fetch('http://ip-api.com/json');
+            ipApi = await fetch('https://ip-api.com/json');
             ipJson = await ipApi.json();
             if (ipJson.country == "India") {
                 document.querySelector("#card a").href =
@@ -176,7 +176,7 @@
     }
 
     if (n == 2) {
-        document.querySelector("#card_img").src = "maryT.png";
+        document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/maryT.png";
         p = document.createElement("p");
         p.setAttribute("style", "padding-top:3%;");
         cText = document.createTextNode(
@@ -193,7 +193,7 @@
         document.querySelector("#card_text").appendChild(p);
     
         async function aff() {
-            ipApi = await fetch('http://ip-api.com/json');
+            ipApi = await fetch('https://ip-api.com/json');
             ipJson = await ipApi.json();
             if (ipJson.country == "India") {
                 document.querySelector("#card a").href =
@@ -212,7 +212,7 @@
     }
 
     if (n == 3) {
-        document.querySelector("#card_img").src = "gandhiT.png";
+        document.querySelector("#card_img").src = "https://github.com/agnelvishal/my-storage/raw/master/gandhiT.png";
         p = document.createElement("p");
         p.setAttribute("style", "padding-top:9%;");
         cText = document.createTextNode(
@@ -221,7 +221,7 @@
         p.appendChild(cText);
         document.querySelector("#card_text").appendChild(p);
         async function aff() {
-            ipApi = await fetch('http://ip-api.com/json');
+            ipApi = await fetch('https://ip-api.com/json');
             ipJson = await ipApi.json();
             if (ipJson.country == "India") {
                 document.querySelector("#card a").href =
@@ -240,6 +240,8 @@
 
     }
 </script>
+
+
 
 
  <div class="footer">
