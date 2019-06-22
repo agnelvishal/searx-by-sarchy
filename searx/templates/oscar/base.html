@@ -83,16 +83,19 @@
     {% endblock %}
 
     </div>
-    <div class="footer">
+
+   
+ <div class="footer">
         <div class="container">
             {% block footer %}
             {% endblock %}
             <p class="text-muted">
                 <small>
-                    {{ _('Powered by') }} <a href="https://asciimoo.github.io/searx/">searx</a> - {{ searx_version }} - {{ _('a privacy-respecting, hackable metasearch engine') }}<br/>
+                    {{ _('Powered by') }} searx - {{ searx_version }} - {{ _('a privacy-respecting, customizable metasearch engine') }}<br/>
                     <a href="https://github.com/asciimoo/searx">{{ _('Source code') }}</a> |
-                    <a href="https://github.com/asciimoo/searx/issues">{{ _('Issue tracker') }}</a> |
-                    <a href="https://github.com/asciimoo/searx/wiki/Searx-instances">{{ _('Public instances') }}</a>
+                    <a href="mailto:agnelvishal@gmail.com"> Contact at agnelvishal@gmail.com </a>|
+<a id="searchinstall" href="#" style="display:none;" onclick="window.external.AddSearchProvider(window.location.protocol + '//' + window.location.host + '/opensearch.xml');">Click to add Searx in search bar</a>
+ <script>if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){document.querySelector('#searchinstall').style.display=""; }  </script>
                 </small>
             </p>
         </div>
@@ -110,5 +113,19 @@
         .glyphicon { display: none; }
       </style>
     </noscript>
+<script>
+var els = document.querySelectorAll("a[href^='https://www.amazon.com']");
+for (var i = 0, l = els.length; i < l; i++) {var el = els[i];url = new URL(el.href);url.searchParams.append('tag','pragmata03-20');el.href=url;}
+var els = document.querySelectorAll("a[href^='https://www.amazon.de']");
+for (var i = 0, l = els.length; i < l; i++) {  var el = els[i];url = new URL(el.href);url.searchParams.append('tag','pragmata-21');el.href=url;}
+var els = document.querySelectorAll("a[href^='https://www.amazon.co.uk']");
+for (var i = 0, l = els.length; i < l; i++) {  var el = els[i];url = new URL(el.href);url.searchParams.append('tag','pragmata00-21');el.href=url;}
+var els = document.querySelectorAll("a[href^='https://www.amazon.in']");
+for (var i = 0, l = els.length; i < l; i++) {  var el = els[i];url = new URL(el.href);url.searchParams.append('tag','cleantip-21');el.href=url;}
+var els = document.querySelectorAll("a[href^='https://www.amazon.fr']");
+for (var i = 0, l = els.length; i < l; i++) {  var el = els[i];url = new URL(el.href);url.searchParams.append('tag','pragmata0e-21');el.href=url;} 
+var els = document.querySelectorAll("a[href^='https://www.amazon.it']");
+for (var i = 0, l = els.length; i < l; i++) {  var el = els[i];url = new URL(el.href);url.searchParams.append('tag','pragmata07-21');el.href=url;} 
+</script>
 </body>
 </html>

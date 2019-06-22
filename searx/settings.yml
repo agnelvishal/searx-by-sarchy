@@ -4,15 +4,15 @@ general:
 
 search:
     safe_search : 0 # Filter results. 0: None, 1: Moderate, 2: Strict
-    autocomplete : "" # Existing autocomplete backends: "dbpedia", "duckduckgo", "google", "startpage", "wikipedia" - leave blank to turn it off by default
+    autocomplete : "duckduckgo" # Existing autocomplete backends: "dbpedia", "duckduckgo", "google", "startpage", "wikipedia" - leave blank to turn it off by default
     language : "en-US"
     ban_time_on_fail : 5 # ban time in seconds after engine errors
     max_ban_time_on_fail : 120 # max ban time in seconds after engine errors
 
 server:
     port : 8888
-    bind_address : "127.0.0.1" # address to listen on
-    secret_key : "ultrasecretkey" # change this!
+    bind_address : "134.209.231.175" # address to listen on
+    secret_key : "82bcbe2621e54b265f4ed0d7d1b8135a" # change this!
     base_url : False # Set custom base_url. Possible values: False or "https://your.custom.host/location/"
     image_proxy : False # Proxying image results through searx
     http_protocol_version : "1.0"  # 1.0 and 1.1 are supported
@@ -23,8 +23,7 @@ ui:
     default_theme : oscar # ui theme
     default_locale : "" # Default interface locale - leave blank to detect from browser information or use codes from the 'locales' config section
     theme_args :
-        oscar_style : logicodev # default style of oscar
-
+        oscar_style : logicodev-dark # dd
 # searx supports result proxification using an external service: https://github.com/asciimoo/morty
 # uncomment below section if you have running morty proxy
 #result_proxy:
@@ -54,6 +53,66 @@ engines:
     timeout: 4.0
     shortcut: apkm
     disabled: True
+
+  - name : amazon
+    engine : xpath
+    search_url : https://www.amazon.com/s?k={query} 
+    url_xpath : //a[@class="a-link-normal a-text-normal"]/@href
+    title_xpath : //a[@class="a-link-normal a-text-normal"]//span
+    content_xpath : //span[@class="a-size-base-plus a-color-base a-text-normal"]
+    categories : general
+    timeout : 3.0
+    shortcut : amz
+
+  - name : amazon Germany
+    engine : xpath
+    search_url : https://www.amazon.de/s?k={query} 
+    url_xpath : //a[@class="a-link-normal a-text-normal"]/@href
+    title_xpath : //a[@class="a-link-normal a-text-normal"]//span
+    content_xpath : //span[@class="a-size-base-plus a-color-base a-text-normal"]
+    categories : general
+    timeout : 3.0
+    shortcut : amzde
+
+  - name : amazon France
+    engine : xpath
+    search_url : https://www.amazon.fr/s?k={query} 
+    url_xpath : //a[@class="a-link-normal a-text-normal"]/@href
+    title_xpath : //a[@class="a-link-normal a-text-normal"]//span
+    content_xpath : //span[@class="a-size-base-plus a-color-base a-text-normal"]
+    categories : general
+    timeout : 3.0
+    shortcut : amzfr
+
+  - name : amazon UK
+    engine : xpath
+    search_url : https://www.amazon.co.uk/s?k={query} 
+    url_xpath : //a[@class="a-link-normal a-text-normal"]/@href
+    title_xpath : //a[@class="a-link-normal a-text-normal"]//span
+    content_xpath : //span[@class="a-size-base-plus a-color-base a-text-normal"]
+    categories : general
+    timeout : 3.0
+    shortcut : amzuk
+
+  - name : amazon in
+    engine : xpath
+    search_url : https://www.amazon.in/s?k={query} 
+    url_xpath : //a[@class="a-link-normal a-text-normal"]/@href
+    title_xpath : //a[@class="a-link-normal a-text-normal"]//span
+    content_xpath : //span[@class="a-size-base-plus a-color-base a-text-normal"]
+    categories : general
+    timeout : 3.0
+    shortcut : amzin
+
+  - name : amazon it
+    engine : xpath
+    search_url : https://www.amazon.it/s?k={query} 
+    url_xpath : //a[@class="a-link-normal a-text-normal"]/@href
+    title_xpath : //a[@class="a-link-normal a-text-normal"]//span
+    content_xpath : //span[@class="a-size-base-plus a-color-base a-text-normal"]
+    categories : general
+    timeout : 3.0
+    shortcut : amzit
 
   - name : arch linux wiki
     engine : archlinux
@@ -152,7 +211,7 @@ engines:
     engine : duckduckgo_definitions
     shortcut : ddd
     weight : 2
-    disabled : True
+    disabled : False
 
   - name : digbt
     engine : digbt
@@ -186,7 +245,7 @@ engines:
   - name : duckduckgo
     engine : duckduckgo
     shortcut : ddg
-    disabled : True
+    disabled : False
 
   - name : duckduckgo images
     engine : duckduckgo_images
